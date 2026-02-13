@@ -58,4 +58,4 @@ async def stream_llm(request: Request):
             err_data = {"error": str(e)}
             yield f"data: {json.dumps(err_data)}\n\n"
 
-    return StreamingResponse(event_generator(), media_type="text/event-stre
+    return StreamingResponse(event_generator(), media_type="text/event-stream")
